@@ -1,0 +1,117 @@
+\documentclass{thesisclass}
+% ----------------------------------------------------------------
+% Thesis - Main document
+% ----------------------------------------------------------------
+
+\newcommand{\inftitle}{Cloaking contact grids and bus-bars on solar cells}
+\newcommand{\infauthor}{Lukas Powalla}
+\newcommand{\inflongauthor}{Lukas Powalla}
+\newcommand{\infplaceofbirth}{Karlsruhe}
+\newcommand{\infyear}{2016}
+\newcommand{\infexamdate}{16.03.2016}
+\newcommand{\infreferee}{Prof.\@ Dr.\@ Martin Wegener}
+\newcommand{\infrefereetwo}{Prof.\@ Dr.\@ }
+
+% Automatic inline todonotes (with possibility to use lists inside)
+\newcommand{\todoi}[1]{\todo[inline,caption={}]{#1}}
+
+%circles around number
+\newcommand{\kreis}[1]{\unitlength1ex\begin{picture}(2.5,2.5)%
+	\put(1.25,0.75){\circle{2.5}}\put(1.25,0.75){\makebox(0,0){#1}}\end{picture}}
+
+
+%% -------------------------------
+%% |  Information for PDF file   |
+%% -------------------------------
+\hypersetup{
+% draft=true,
+ pdfauthor={Lukas Powalla},
+ pdftitle={Bachelorarbeit},
+ pdfsubject={Not set},
+ pdfkeywords={Not set}
+}
+
+
+%% ------------------------
+%% |    Including files   |
+%% ------------------------
+% Only files listed here will be included, but table of contents and cross-references are
+% kept. -> comment out lines for partial translation of the document
+%\includeonly{%
+%tex/cover,
+%tex/title,
+%tex/ch1_intro,
+%tex/ch8_conclusion,
+%}
+
+% Adds the reference library for biblatex
+\addbibresource{bib/library.bib}
+
+% every folder containing graphics that will be included in the document must be
+% listed here
+\graphicspath{{img/}
+    %{img/transformation_physics/}
+    %{img/thermal_cloaking/}
+}
+
+\hyphenation{
+  an-iso-tro-pic
+  pho-non
+  po-ly-sty-re-ne
+  pho-to-graphs
+  scat-ter-ing
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Here, main documents begins %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\ChapterOutsidePart
+
+\pagenumbering{roman}
+%\include{tex/cover}
+%\blankpage
+%\quad
+%\thispagestyle{empty}
+%\blankpage
+\include{tex/title}
+%\quad
+%\thispagestyle{empty}
+%\blankpage
+\include{tex/title}
+\blankpage
+
+\tableofcontents
+\blankpage
+
+%% -----------------
+%% |   Main part   |
+%% -----------------
+\pagenumbering{arabic}
+\blankpage
+
+\tableofcontents
+\blankpage
+
+%% -----------------
+%% |   Main part   |
+%% -----------------{arabic}
+
+\include{tex/ch1_intro}
+\include{tex/ch_simulation}
+\include{tex/ch8_conclusion}
+
+%% --------------------
+%% |   Bibliography   |
+%% --------------------
+\DeclareFieldFormat{titlecase}{#1}
+\printbibliography[heading=bibintoc]
+%\include{tex/acknowledgments}
+
+\quad
+\thispagestyle{empty}
+\newpage
+
+\end{document}

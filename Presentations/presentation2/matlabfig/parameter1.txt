@@ -1,0 +1,10 @@
+p.addParameter('xlim',50,@isnumeric);              % starting ref. index
+p.addParameter('ylim',50,@isnumeric);            % end ref. index
+p.addParameter('nx',10,@isnumeric);          % x-size of unit cell
+p.addParameter('ny',10,@isnumeric);           % y-size of unit cell
+p.addParameter('rx1',5,@isnumeric);            % x-scaling factor
+p.addParameter('rx2',50,@isnumeric);            % y-scaling factor
+p.addParameter('ry1',5,@isnumeric);  % additional safety factor
+p.addParameter('ry2',50,@isnumeric);
+p.addParameter('y0x',5,@isnumeric);
+p.addParameter('y0y',5,@isnumeric);

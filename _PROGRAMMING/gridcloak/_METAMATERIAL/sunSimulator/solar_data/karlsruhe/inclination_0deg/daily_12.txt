@@ -1,0 +1,47 @@
+Latitude:	49°0'24" North, 
+Longitude:	8°24'13" East
+
+Results for: 	December
+
+Inclination of plane:	 0	 deg.
+Orientation (azimuth) of plane:	 0	 deg.
+Time		G		Gd		Gc		DNI		DNIc
+08:22		31		28		38		48		218
+08:37		41		36		58		63		289
+08:52		52		43		80		77		354
+09:07		62		49		104		89		410
+09:22		72		55		128		100		458
+09:37		81		60		152		108		497
+09:52		89		64		174		115		530
+10:07		97		68		194		121		558
+10:22		104		72		213		126		580
+10:37		110		74		229		130		599
+10:52		115		77		243		134		614
+11:07		118		79		255		136		626
+11:22		121		80		263		138		634
+11:37		123		81		269		139		640
+11:52		124		81		272		140		642
+12:07		124		81		272		140		642
+12:22		123		81		269		139		640
+12:37		121		80		263		138		634
+12:52		118		79		255		136		626
+13:07		115		77		243		134		614
+13:22		110		74		229		130		599
+13:37		104		72		213		126		580
+13:52		97		68		194		121		558
+14:07		89		64		174		115		530
+14:22		81		60		152		108		497
+14:37		72		55		128		100		458
+14:52		62		49		104		89		410
+15:07		52		43		80		77		354
+15:22		41		36		58		63		289
+15:37		31		28		38		48		218
+15:52		20		20		21		32		145
+
+G: Global irradiance on a fixed plane  (W/m2)
+Gd: Diffuse irradiance on a fixed plane  (W/m2)
+Gc: Global clear-sky irradiance on a fixed plane  (W/m2)
+DNI: Direct normal irradiance   (W/m2)
+DNIc: Clear-sky direct normal irradiance  (W/m2)
+
+PVGIS (c) European Communities, 2001-2012

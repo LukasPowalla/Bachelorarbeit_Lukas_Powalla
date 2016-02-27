@@ -1,0 +1,22 @@
+Latitude:	49°0'24" North, 
+Longitude:	8°24'13" East
+Optimal inclination angle is: 	36	deg.
+Annual irradiation deficit due to shadowing (horizontal):  	 0.0 %
+
+Month		H(36)
+Jan		1390
+Feb		2380
+Mar		3990
+Apr		5260
+May 		5360
+Jun		5780
+Jul		5620
+Aug		5330
+Sep		4420
+Oct		3030
+Nov		1690
+Dec		1120
+Year		3790
+H(36): Irradiation on plane at angle: 36deg.  (Wh/m2/day)
+
+PVGIS (c) European Communities, 2001-2012
