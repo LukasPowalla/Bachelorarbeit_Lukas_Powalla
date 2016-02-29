@@ -61,7 +61,7 @@ else
 end
 
 if strcmp(city.description,'UNSPECIFIED')
-    city = cityClass('Karlsruhe',1,49.007,8.404,'sunSimulator\solar_data\karlsruhe',fromDNI);
+    city = cityClass('Karlsruhe',1,49.007,8.404,['sunSimulator' filesep 'solar_data' filesep 'karlsruhe'],fromDNI);
 end
 
 if includeDiffusive && fromDNI
