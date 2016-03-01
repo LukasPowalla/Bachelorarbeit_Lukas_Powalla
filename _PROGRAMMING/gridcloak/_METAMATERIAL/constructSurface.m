@@ -1,4 +1,4 @@
-function [ dphiu,dphiv,x_m,y_m ] = constructSurface( varargin )
+function [ dphix,dphiy,x_m,y_m ] = constructSurface( varargin )
 %constructs Surface, especially the matrices dphix and dphiy
 %% input parsing
 p = inputParser;
@@ -14,7 +14,7 @@ p.addParameter('sy',0.9,@isnumeric);            % y-scaling factor
 p.addParameter('safetyFactor',0.9,@isnumeric);  % additional safety factor
 p.addParameter('h0',20,@isnumeric);
 p.addParameter('k0',1,@isnumeric);
-p.addParameter('gamma',90,@isnumeric);
+p.addParameter('gamma',55,@isnumeric);
 
 
 p.parse(varargin{:});
@@ -39,9 +39,13 @@ sy=sy*safetyFactor;
 sx=sx*safetyFactor;
 %% x_m and y_m are the midpoints of the pixels, we have numx*numy pixels
 [x_m,y_m]=meshgrid(linspace(xmin+(xlim-xmin)/(2*numx),xlim-(xlim-xmin)/(2*numx),numx),linspace(ymin+(ylim-ymin)/(2*numy),ylim-(ylim-ymin)/(2*numy),numy));
-dphix=n2.*k0.*(x_m.*(sx-1)./(sqrt((sy-1)^2*y_m.^2+h0^2)))./sqrt(1+(x_m.*(sx-1)./(sqrt((sy-1)^2*y_m.^2+h0^2))).^2);
-dphiy=n2.*k0.*(((sy-1).*y_m/h0)./sqrt(1+((sy-1).*y_m./h0).^2)./sqrt(1+((sx-1).*x_m./sqrt((sy-1).*y_m.^2+h0.^2)).^2));
-dphiu=cosd(gamma).*dphix+sind(gamma).*dphiy;
-dphiv=-sind(gamma).*dphix+cosd(gamma).*dphiy;
+u_m=cosd(gamma)*x_m+sind(gamma)*y_m;
+v_m=-sind(gamma)*x_m+cosd(gamma)*y_m;
+arg1=(((sx-1).*cosd(gamma)+(sy-1).*sind(gamma)).*u_m)./sqrt(((-(sx-1).*sind(gamma)+(sy-1).*cosd(gamma)).*v_m).^2+h0.^2);
+arg2=((-(sx-1).*sind(gamma)+(sy-1).*cosd(gamma)).*v_m)./h0;
+dphiu=k0.*n2.*arg1./(sqrt(1+arg1.^2));
+dphiv=(k0.*n2.*arg2./(sqrt(1+arg2.^2)))./sqrt(1+arg1.^2);
+dphix=cosd(gamma).*dphiu-sind(gamma).*dphiv;
+dphiy=sind(gamma).*dphiu+cosd(gamma).*dphiv;
 end
 

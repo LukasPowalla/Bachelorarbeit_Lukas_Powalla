@@ -38,7 +38,7 @@ ymin=p.Results.ymin;
 [dphix,dphiy]=constructSurface('n1',n1,'n2',n2,'h0',h0,'xlim',xlim,'ylim',ylim,'sx',sx,'sy',sy,'safetyFactor',safetyFactor,'numx',numx,'numy',numy);
 %% annual intensity
 nalpha=50;
-nbeta=50;
+nbeta=100;
 [alphas,betas] = meshgrid(linspace(0,80,nalpha),linspace(0,80,nbeta));
 P_values=zeros(nalpha,nbeta);
 for i=1:nalpha
