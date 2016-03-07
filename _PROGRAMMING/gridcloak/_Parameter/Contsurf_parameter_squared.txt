@@ -1,0 +1,66 @@
+							Parameterset 1: normal incidence optimisation -squared
+
+for annual improvement calculation
+
+xlim=50;
+ylim=50;
+nx=30;
+ny=30;
+rx1=5;
+rx2=50;
+ry1=5;
+ry2=50;
+n=1.5;
+a=1.9;
+b=1.9;
+y0x=9;
+y0y=9;
+
+for plotting; now it has the same numbers of rays than for rectangular 
+
+xlim=50;
+ylim=50;
+nx=15;
+ny=15;
+rx1=5;
+rx2=50;
+ry1=5;
+ry2=50;
+n=1.5;
+a=1.9;
+b=1.9;
+y0x=9;
+y0y=9;
+
+							Parameterset2: optimised for annual improvement - squared
+
+xlim=50;
+ylim=50;
+nx=30;
+ny=30;
+rx1=5;
+rx2=50;
+ry1=5;
+ry2=50;
+n=1.5;
+a=0.6;
+b=1.7;
+y0x=5.5;
+y0y=6.0;
+
+for plotting; now it has the same numbers of rays than for rectangular 
+
+xlim=50;
+ylim=50;
+nx=15;
+ny=15;
+rx1=5;
+rx2=50;
+ry1=5;
+ry2=50;
+n=1.5;
+a=0.6;
+b=1.7;
+y0x=5.5;
+y0y=6.0;
+

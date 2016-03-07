@@ -1,8 +1,53 @@
+\section{description of the problem}
 \section{state of the art}
 In order to improve the optical properties of solar cells a lot of research has been done. It is important to minimise reflections on the sunny side of the solar cell and in addition to that it is also important to guide as much light as possible to the optical active areas of the solar cell. 
-Reflected light and light that hits the contact grid and the busbar is lost.
+Reflected light and light that hits the contact grid and the busbar is lost. In addition to that, there are also other approaches on increasing the efficiency of solar cells such as reducing the electrical losses.
 
-The question I want to deal with in my Bachelorthesis is how to minimise light that hits the contact grid and the busbar. You can reach this by either decreasing the contact grid and the busbars. This can be reached through using back contact solar cells \cite{kerschaver2006back} or emitter wrap through solar cells \cite{gee1992emitter}. 
+The question I want to deal with in my Bachelorthesis is how to minimise light that hits the contact grid and the busbar. Before I talk about how we will try this, I want to introduce to most popular approaches to minimise the losses caused by this effect.
+You can reach this by decreasing the contact grid and the busbars. This can be reached through using back contact solar cells \cite{kerschaver2006back} or emitter wrap through solar cells \cite{gee1992emitter}. 
 
-Another approach is to design the sun-side of the solar cell in a way that the light in the end hits the optical active area. 
+Another approach is to design the sun-side of the solar cell in a way that the light in the end hits the optical active area. In other words, I will try to cloak the busbars and contact fingers. 
 
+\section{state of the ansatz used in this thesis}
+In this Bachelorthesis, I will simulate and discuss a optical cloak for cloaking contact fingers and busbars on solar cells. All in all, I want to discuss three different approaches. The first approach is to cover the sun-side of the solar cell with a thin polymer (n=1.5) and design the surface of the polymer in a way that the light coming from all different angles is refracted as uniform as possible to the optical active areas of the solar cell. 
+The second approach is to design the surface of the polymer similar to a fresnel-linse. This means that the linse is not continuous any more. The surface is divided into pixels and each pixel can be rotated free. This allows a optimal surface for normal incident. 
+In the end, we will design a metasurface which should fulfil the optical requirements. 
+\section{theory}
+In order to design optical interfaces with specific optical properties, it is important to emphasise the most important physical formulas used for the simulations. In general, on a interface between medium 1 with refractive index $n_1$ and medium 2 with refractive index $n_2$, we observe refraction and refraction dependent on the inclination angle and on the two refractive indexes. In addition to that, the intensity of the refraction and reflection is also dependant on this values. 
+\subsection{ordinary refraction and reflection \label{Snells_law_ordinary}}
+On the border between medium 1 with refractive index $n_1$ and medium 2 with refractive index $n_2$ light doesn't travel on straight lines. Instead, The light gets refracted by Snell's law. 
+ordinary law of refraction: (Snell's law)
+\begin{align*}
+n_1 \cdot \sin(\alpha) = n_2 \cdot \sin(\beta)
+\end{align*}
+ordinary law of reflection:
+\begin{align*}
+\alpha=\gamma
+\end{align*}
+The angle $\alpha$ is the angle between the ray in the medium 1 and the normal vector of the surface defined by the boarder of the two media pointing into medium 1 and the angle $\beta$ is the angle between the ray in the medium 2 and the normal vector of the surface defined by the boarder of the two media pointing into medium 2. 
+% KOMENTAR nicht gut formuliert
+In my Bachelorthesis, I used the Snell's law in vector-form. 
+\subsection{generalised refraction and reflection \label{Snalls_law_generalised}}
+On the interface between two materials with different refractive index we can in principle also think of a additional phase the light gets when it hits the interface. This leads to a more generalised law of refraction and reflection. (\cite{yu2011light} and \cite{yu2014flat})
+Generalised law of refraction (\cite{yu2014flat}):
+\begin{align*}
+ n_2 \cdot \sin(\theta_2) - n_1 \cdot \sin(\theta_1) &= \frac{1}{k_0} \cdot \frac{d \phi}{dx} \\
+ \cos(\theta_2) \cdot \sin(\phi_2) &=\frac{1}{k_0} \cdot n_2 \frac{d \phi}{dy}
+\end{align*}
+
+Generalised law of reflection (\cite{yu2014flat}):
+\begin{align*}
+\sin(\theta_2) - \sin(\theta_1) &=\frac{1}{k_0 n_1} \frac{d \phi}{dx} \\
+\cos(\theta_2) \cdot \sin(\phi_2) &=\frac{1}{k0 n_2} \frac{d \phi}{dy}
+\end{align*}
+
+\section{Simulations}
+I am using matlab for simulations. The ray-tracer for the three problems are self-written. In order to compare the methods with each other, I introduced the relative improvement (similar to \cite{schumann2015cloaked} ). 
+\begin{align*}
+P&=\frac{N}{N0 \cdot (1-f) } \\
+f&= 1-sx \cdot sy
+\end{align*}
+P describes the relative improvement, sx and sy are the scaling factors in x- and y-direction, N0 is the total number of rays and N is the total number of rays minus the number of rays on contact Grid.
+For each inclination angle, I can calculate the relative improvement. However, the relative improvement does not tell so much about the improvement of a solar cell installed for example on a roof. Therefore, we introduce the annual improvement, which is the annual average of the relative improvement. 
+
+% KOMENTAR annual improvement

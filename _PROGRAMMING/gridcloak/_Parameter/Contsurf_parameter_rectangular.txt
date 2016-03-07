@@ -1,0 +1,32 @@
+Parameterset 1: normal incidence optimisation -rectangular
+
+xlim=500;
+ylim=50;
+nx=50;
+ny=5;
+rx1=50;
+rx2=500;
+ry1=5;
+ry2=50;
+n=1.5;
+a=1.9;
+b=2.0;
+
+Parameterset2: optimised for annual improvement - rectangular
+
+xlim=500;
+ylim=50;
+nx=50;
+ny=5;
+rx1=40.9967;                                  
+rx2=500;
+ry1=9.4627;            
+ry2=50;
+n=1.5;
+a=2.0669;
+b=5.0000;
+y0x=49.7675;
+y0y=55.5395;
+y0x=75;
+y0y=70;
+
