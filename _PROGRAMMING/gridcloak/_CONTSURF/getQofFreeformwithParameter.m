@@ -12,8 +12,8 @@ p.addParameter('rx1',50,@isnumeric);            % x-scaling factor
 p.addParameter('rx2',500,@isnumeric);            % y-scaling factor
 p.addParameter('ry1',5,@isnumeric);  % additional safety factor
 p.addParameter('ry2',50,@isnumeric);
-p.addParameter('a',2,@isnumeric);
-p.addParameter('b',2,@isnumeric);
+p.addParameter('a',2.07,@isnumeric);
+p.addParameter('b',2.07,@isnumeric);
 p.addParameter('y0x',50,@isnumeric);
 p.addParameter('y0y',5,@isnumeric);
 

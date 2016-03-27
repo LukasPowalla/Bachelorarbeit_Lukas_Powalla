@@ -11,6 +11,8 @@ ry2=50;
 n=1.5;
 a=1.9;
 b=2.0;
+y0x=75;
+y0y=70;
 
 Parameterset2: optimised for annual improvement - rectangular
 
@@ -27,6 +29,5 @@ a=2.0669;
 b=5.0000;
 y0x=49.7675;
 y0y=55.5395;
-y0x=75;
-y0y=70;
+
 

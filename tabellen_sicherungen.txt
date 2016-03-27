@@ -1,0 +1,35 @@
+rectangular solar cell
+
+\begin{table}
+\centering
+\caption{Parameters for simulation for rectangular unit cell ( 500 x 50 units)}
+\label{_table_rectangular_cell}
+\begin{tabular}{c|c|c|c|c|c|c|c|c}
+a & b & y0x & y0y & rx1 & ry1 & $\xi$ (annual imp.) & optimisation & [nalphas,nbetas] \\
+\hline\hline
+2.07 & 5.00 & 49.77 & 55.54 & 51.00 & 9.46 & 1.1371 & annualImpr. & [10,10] \\
+2.07 & 5.00 & 49.77 & 55.54 & 51.00 & 9.46 & 1.1101 & annualImpr. & [20,20] \\
+1.9 & 2.0 & 75 & 70 & 50 & 5 & 1.1071 & normalinc. & [10,10] \\
+1 & 0 & 50 & 0 & 50 & 0 & 1.1025 & only f(x) & [10,10] \\
+0 & 1 & 0 & 5 & 0 & 5 & 1.0789 & only g(y) &[10,10]
+\end{tabular}
+\end{table}
+squared solar cell
+
+
+
+
+
+\begin{table}
+\centering
+\caption{Parameters for simulation for squared unit cell ( 50 x 50 units) }
+\label{_table_squared_cell}
+\begin{tabular}{c|c|c|c|c|c|c}
+a & b & y0x & y0y & $\xi$ (annual imp.) & optimisation & [nalphas,nbetas] \\
+\hline\hline
+0.6 & 1.7 & 5.5 & 6.0 & 1.1153 & annualImpr. & [10,10] \\
+1.9 & 1.9 & 9 & 9 & 1.0225 & normalinc. & [10,10] \\
+1 & 0 & 5 & 0 & 1.1019 & only f(x) & [10,10] \\
+0 & 1 & 0 & 5 & 1.1031 & only g(y) & [10,10]
+\end{tabular}
+\end{table}

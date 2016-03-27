@@ -1,6 +1,6 @@
 %script to construct and raytrace a metamaterial
 %% an. in deg. 
-alpha=0;
+alpha=20;
 beta=0;
 %% parameter
 n1 = 1;
@@ -12,7 +12,7 @@ sy = 0.9;
 safetyFactor = 0.9;
 numx=50;
 numy=10;
-h0=50;
+h0=30;
 k0=1;
 orig_z=200;
 xmin=-xlim;

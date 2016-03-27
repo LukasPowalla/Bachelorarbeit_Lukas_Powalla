@@ -17,8 +17,8 @@ sx=0.9;
 sy=0.9;
 orig_z=250;
 %% angles
-alpha=10;
-beta=10;
+alpha=0;
+beta=0;
 %% construction of the triangulation Object
 tr=constructSurface('h0',h0,'numx',numx,'numy',numy,'xlim',xlim,'ylim',ylim,'sx',sx,'sy',sy,'safetyFactor',safetyFactor);
 sz=size(tr,1);
